@@ -1,46 +1,9 @@
 # AMiGA
 
-**A**nalysis of **Mi**crobial **G**rowth **A**ssays is a user-friendly program for analysis of high-throughput microbial growth assays using Gaussian Process regression. Users can interact with `AMiGA` via a command-line interface.
+**A**nalysis of **Mi**crobial **G**rowth **A**ssays is a cool tool that you should check out here: [https://github.com/firasmidani/amiga](https://github.com/firasmidani/amiga).
 
-## Documentation:
+# AMiGA Irregular Time-Points Hack
 
-See [documentation](https://firasmidani.github.io/amiga) for tutorials, technical details, and examples.
+Currently, AMiGA does not allow analysis of growth curve data that has irregular time intervals. This repository is a fork from the original AMiGA program. It is a *hack* that allows loading of data with arbitrary time points into AMiGA to obtain summary statistics. This fork is intended only as a short-term work-around and not as a stable release. User beware!
 
-## Installation:
-
-See [Installation](https://firasmidani.github.io/amiga/doc/installation.html) for instructions and requirements.
-
-## License
-
-This project is covered under the [GPL-3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
-
-## Major Updates
-
-See [CHANGELOG](https://github.com/firasmidani/amiga/blob/master/CHANGELOG.md) for more details of changes and updates. 
-
-2021-04-22<br />
-Major structural and aesthetic changes to amiga with new features.
-
-2020-11-04  
-Improvements to differential testing of growth.
-
-2020-08-26  
-Structural changes and more functions: e.g. heatmaps, time-dependent noise, pooling of replicates.
-
-2020-06-10  
-Improvements to how AMiGA stores and exports model-predicted growth data and growth derivative.
-
-2020-04-25  
-The main driver script is now `amiga.py`. Please do not use `main.py`.
-            
-## Bugs/Feature Requests
-
-Please post issues [here](https://github.com/firasmidani/amiga/issues).
-
-## Manuscript and Citation
-
-FS Midani, J Collins, and RA Britton.  
-__AMiGA: software for automated analysis of microbial growth assays.__  
-*mSystems* (2021). [https://doi.org/10.1128/mSystems.00508-21](https://doi.org/10.1128/mSystems.00508-21)  
-
-To reproduce analysis and figures in the manuscript, see [Manuscript README](https://github.com/firasmidani/amiga/blob/master/examples/manuscript/README.md). 
+Only one well can be run at a time. The data for each well is simply inputted as a `.csv` file (first column: time, second column: baselined OD value). 
